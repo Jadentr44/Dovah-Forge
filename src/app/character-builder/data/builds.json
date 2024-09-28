@@ -1,0 +1,104 @@
+{
+  "builds": [
+    {
+      "name": "Barbarian",
+      "desc": "This build focuses on raw power, heavy armor, and devastating two-handed weapon strikes, fitting the strengths of both Nords and Orcs.",
+      "primary_skills":["1","2","3"],
+      "secondary_skills":["4","5"],
+      "races": ["nord","orc"]
+    },
+    {
+      "name": "Spellsword ",
+      "desc": "A balanced mix of magic and melee that both High Elves and Orcs can use effectively, with High Elves leaning toward magic and Orcs toward melee.",
+      "primary_skills":["8","9","10"],
+      "secondary_skills":["11","5"],
+      "races": ["high_elf","orc"]
+    },
+    {
+      "name": "Warrior",
+      "desc": "focusing on strength, durability, and powerful melee combat, allowing you to charge into battle and overpower your enemies with sheer force.",
+      "primary_skills":["8","2","3"],
+      "secondary_skills":["4","6"],
+      "races": ["nord","orc"]
+    },
+    {
+      "name": "Stealth Mage",
+      "desc": "Approach enemies unseen, using stealth to deliver deadly one-handed sneak attacks, then fall back to destruction magic to eliminate the rest.",
+      "primary_skills":["12","7","9"],
+      "secondary_skills":["14","13"],
+      "races": ["khajiit","high_elf"]
+    }
+  ],
+  "skills":[
+    {
+      "index": 1,
+      "name": "Two-Handed",
+      "desc": "Focus on maximizing damage with large, heavy weapons like battleaxes, warhammers, and greatswords."
+    },
+    {
+      "index": 2,
+      "name": "Heavy Armor",
+      "desc": "Helps to absorb damage in battle, perfect for melee combat."
+    },
+    {
+      "index": 3,
+      "name": "Block",
+      "desc": "Blocking with a weapon or shield can reduce damage taken."
+    },
+    {
+      "index": 4,
+      "name": "Smithing",
+      "desc": "Crafting and upgrading your own weapons and armor are essential for a warrior."
+    },
+    {
+      "index": 5,
+      "name": "Enchanting",
+      "desc": "Enchanting your weapons and armor with stamina regeneration, health boosts, or extra damage can enhance your attack."
+    },
+    {
+      "index": 6,
+      "name": "Archery",
+      "desc": "Useful for taking out enemies at a distance before charging into combat."
+    },
+    {
+      "index": 7,
+      "name": "Sneak",
+      "desc": "Incredibly versatile, allowing you to steal, deliver devastating blows, or avoid confrontation."
+    },
+    {
+      "index": 8,
+      "name": "One-Handed",
+      "desc": "Perform power attacks with one-handed weapons like swords, axes, and maces, making it essential for fast and versatile melee combat."
+    },
+    {
+      "index": 9,
+      "name": "Destruction ",
+      "desc": "Focus on Destruction for offensive magic, especially fire, frost, or shock spells."
+    },
+    {
+      "index": 10,
+      "name": "Restoration",
+      "desc": " focus on Restoration for healing and wards. You can heal yourself during battle while fighting."
+    },
+    {
+      "index": 11,
+      "name": "Light Armor",
+      "desc": "Ideal for thieves, assassins, archers, and mages who want to stay mobile."
+    },
+    {
+      "index": 12,
+      "name": "Illusion",
+      "desc": "Manipulate the minds of enemies through spells like Calm, Fear, and Invisibility, making it ideal for stealth, crowd control, and avoiding direct combat."
+    },
+    {
+      "index": 13,
+      "name": "Alchemy",
+      "desc": "Create potions to enhance your stealth or poisons to weaken enemies before engaging in combat."
+    },
+    {
+      "index": 14,
+      "name": "Alteration ",
+      "desc": "Enhances your ability to alter the physical world with spells like Oakflesh, Paralyze, and Telekinesis, providing powerful defensive buffs, crowd control, and utility in various situations."
+    }
+  ]
+}

@@ -15,10 +15,10 @@ export default function Home() {
 
   return (
     <div className="px-4 ">
-      <div className="mx-auto max-w-5xl border-2  px-4 py-5 rounded-md my-8 ">
+      <div className=" my-8 ">
         
        {page == "race" && <Race setPage={setPage} update_build={update_build} />}
-       {page == "build_sheet" && <Build_Sheet build={build} />}
+       {page == "build_sheet" && <Build_Sheet character={build} />}
       </div>
     </div>
   );

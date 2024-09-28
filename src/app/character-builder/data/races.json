@@ -1,0 +1,56 @@
+{
+  "racesArr": [
+    {
+      "name": "Nord",
+      "desc": "Nords in Skyrim are hardy, resilient warriors from the cold northern lands, renowned for their bravery, honor, and natural resistance to frost.",
+      "points": {
+        "Two_Handed": 25,
+        "Smithing": 20,
+        "Block": 20,
+        "One_Handed": 20,
+        "Light_Armor": 20,
+        "Speech": 20
+      },
+      "code": "nord"
+    },
+    {
+      "name": "Orc",
+      "desc": "Orcs are a proud and formidable race known for their physical strength, warrior culture, and craftsmanship, particularly in forging powerful Orcish weapons and armor.",
+      "points": {
+        "Heavy_Armor": 25,
+        "Smithing": 20,
+        "Block": 20,
+        "Two_Handed": 20,
+        "One_Handed": 20,
+        "Enchanting": 20
+      },
+      "code": "orc"
+    },
+    {
+      "name": "High Elf",
+      "desc": "High Elves, or Altmer, are a highly intelligent and magically gifted race, hailing from the Summerset Isles, often seen as proud or aloof due to their long lifespans and advanced mastery of arcane arts.",
+      "points": {
+        "Illusion": 25,
+        "Conjuration": 20,
+        "Destruction": 20,
+        "Restoration": 20,
+        "Alteration": 20,
+        "Enchanting": 20
+      },
+      "code": "high_elf"
+    },
+    {
+      "name": "Khajiit",
+      "desc": "Khajiit are a feline race from Elsweyr, known for their agility, stealth, and natural aptitude for thievery, often excelling as thieves, assassins, or traders.",
+      "points": {
+        "Sneak": 25,
+        "One_Handed": 20,
+        "Archery": 20,
+        "Lockpicking": 20,
+        "Pickpocket": 20,
+        "Alchemy": 20
+      },
+      "code": "khajiit"
+    }
+  ]
+}
