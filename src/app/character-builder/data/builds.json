@@ -5,6 +5,7 @@
       "desc": "This build focuses on raw power, heavy armor, and devastating two-handed weapon strikes, fitting the strengths of both Nords and Orcs.",
       "primary_skills":["1","2","3"],
       "secondary_skills":["4","5"],
+      "gear":["Two-Handed"],
       "races": ["nord","orc"]
     },
     {
@@ -12,6 +13,7 @@
       "desc": "A balanced mix of magic and melee that both High Elves and Orcs can use effectively, with High Elves leaning toward magic and Orcs toward melee.",
       "primary_skills":["8","9","10"],
       "secondary_skills":["11","5"],
+      "gear":["One-Handed","Destruction"],
       "races": ["high_elf","orc"]
     },
     {
@@ -19,6 +21,7 @@
       "desc": "focusing on strength, durability, and powerful melee combat, allowing you to charge into battle and overpower your enemies with sheer force.",
       "primary_skills":["8","2","3"],
       "secondary_skills":["4","6"],
+      "gear":["One-Handed","Shield"],
       "races": ["nord","orc"]
     },
     {
@@ -26,6 +29,7 @@
       "desc": "Approach enemies unseen, using stealth to deliver deadly one-handed sneak attacks, then fall back to destruction magic to eliminate the rest.",
       "primary_skills":["12","7","9"],
       "secondary_skills":["14","13"],
+      "gear":["Destruction"],
       "races": ["khajiit","high_elf"]
     }
   ],

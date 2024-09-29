@@ -1,0 +1,23 @@
+{
+
+    "One-Handed":[
+      "Swords",
+      "Mace",
+      "War Axe",
+      "Dagger"
+    ],
+    "Two-Handed":[
+      "Greatsword",
+      "Battleaxe",
+      "Warhammer"
+    ],
+    "Shield":[
+      "Shield"
+    ],
+    "Destruction":[
+      "Fire Spells",
+      "Frost Spells",
+      "Shock Spells"
+    ]
+
+}

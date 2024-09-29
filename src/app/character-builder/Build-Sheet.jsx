@@ -1,5 +1,6 @@
 import React from "react";
 import buildsJson from "./data/builds.json";
+import itemsObj from './data/items.json'
 import Image from "next/image";
 export default function Build_Sheet({ character }) {
   const skills = buildsJson.skills;
@@ -34,13 +35,27 @@ export default function Build_Sheet({ character }) {
         {/* play style */}
         <div className="p-4 border-2 rounded-lg shadow-md bg-white">
           <p>{character.type.desc}</p>
-          <div className="text-lg my-2">
+          <div className="mt-2">
+            <h4 className="text-lg font-semibold">Fight style:</h4>
+            <p>
+
+            {character.type.gear.map(e=>{
+              let itemArr = itemsObj[e]
+              return <p> {itemArr[Math.floor(Math.random() * itemArr.length)]}</p>
+              
+            })}
+            </p>
+          </div>
+          <div className=" my-2">
             {Object.entries(character.options).map(([key, value], i) => {
               return (
-                <h4 key={i}>
-                  <span className="font-semibold">{key}:</span>
-                  {value}{" "}
-                </h4>
+                <div key={i}>
+                  <h4 className="font-semibold text-lg">{key}:</h4>
+                  <p>
+
+                  {value}
+                  </p>
+                </div>
               );
             })}
           </div>
@@ -68,7 +83,6 @@ export default function Build_Sheet({ character }) {
           <ul className="flex flex-col gap-2">
             {character.type.secondary_skills.map((e, i) => {
               let skill = skills[e - 1];
-              console.log(skill);
 
               return (
                 <li key={i}>
