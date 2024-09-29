@@ -14,8 +14,8 @@ export default function Home() {
   }
 
   return (
-    <div className="px-4 ">
-      <div className=" my-8 ">
+    <div className="px-4 bg-[#f0f0f0] h-screen ">
+      <div className=" py-8 ">
         
        {page == "race" && <Race setPage={setPage} update_build={update_build} />}
        {page == "build_sheet" && <Build_Sheet character={build} />}

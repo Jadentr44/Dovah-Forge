@@ -1,0 +1,40 @@
+[
+  {
+    "label": "Faction",
+    "options": [
+      "Companions",
+      "College of Winterhold",
+      "Thieves Guild",
+      "Dark Brotherhood",
+      "Dawnguard",
+      "Volkihar Clan",
+      "Bards College",
+      "Blades"
+    ]
+  },
+  {
+    "label": "Civil War Side",
+    "options": [
+      "Imperial Legion",
+      "Stormcloaks"
+    ]
+  },
+  {
+    "label": "Theft Frequency",
+    "options": [
+      "No Theft",
+      "Occasional",
+      "Frequent",
+      "Constant"
+    ]
+  },
+  {
+    "label": "Murder Frequency",
+    "options": [
+      "No Murder",
+      "Occasional",
+      "Frequent",
+      "Constant"
+    ]
+  }
+]

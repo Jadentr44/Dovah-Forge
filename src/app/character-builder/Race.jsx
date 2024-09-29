@@ -1,48 +1,64 @@
 import React from "react";
 import Options from "./Options";
+import optionsArr from "./data/options.json";
+
 import { useState, useRef } from "react";
 import Image from "next/image";
 
 // import data
-import racesJson from './data/races.json'
+import racesJson from "./data/races.json";
 import buildsJson from "./data/builds.json";
 import namesJson from "./data/names.json";
 
 export default function Race({ setPage, update_build }) {
   // state to track race, and more options setting
   const [race, setRace] = useState(undefined);
+  const options = {};
   const [advanced, setAdvanced] = useState(false);
 
   // name input
   const character_name = useRef(null);
 
   // giving data a variable
-  const races = racesJson.racesArr
-  const builds = buildsJson.builds
-  const names = namesJson
+  const races = racesJson.racesArr;
+  const builds = buildsJson.builds;
+  const names = namesJson;
 
   // funtion to gather all the data, and pass on to build sheet
   function build_character() {
-    // if there is no race selected, set race to random 
+    // if there is no race selected, set race to random
     let selectedRace = race;
     if (!selectedRace) {
       selectedRace = races[Math.floor(Math.random() * races.length)];
       // selectedRace = races[0];
     }
-// finding a build that matches current race
+
+    optionsArr.forEach(e=>{
+
+      
+      if(!options[e.label]){ 
+        options[e.label] = e.options[Math.floor(Math.random() * e.options.length)]
+      }
+    })
+    console.log(options);
+    
+
+
+    // finding a build that matches current race
     const possible_builds = builds.filter((e) => {
       if (e.races.includes(selectedRace.code)) return e;
     });
 
-    // selecting build based on random 
+    // selecting build based on random
     let build =
       possible_builds[Math.floor(Math.random() * possible_builds.length)];
 
-      // creating obj for character
+    // creating obj for character
     let data = {
       name: character_name.current.value,
       race: selectedRace,
       type: build,
+      options: options,
     };
 
     // giving random name if empty
@@ -50,7 +66,6 @@ export default function Race({ setPage, update_build }) {
       let namesArr = names[`${selectedRace.code}_names`];
       data.name = namesArr[Math.floor(Math.random() * namesArr.length)];
     }
-
 
     update_build(data);
     setPage("build_sheet");
@@ -120,7 +135,7 @@ export default function Race({ setPage, update_build }) {
         </label>
       </div>
 
-      {advanced && <Options />}
+      {advanced && <Options options={options} />}
 
       <button
         onClick={build_character}

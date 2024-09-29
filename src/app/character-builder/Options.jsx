@@ -1,44 +1,39 @@
 import React from "react";
+import { useState } from "react";
+import optionsArr from "./data/options.json";
+export default function Options({options}) {
 
-export default function Options() {
+  console.log(optionsArr);
+
   return (
     <div>
       *leave empty for random
-      <h4>Faction</h4>
-      <select className="border-2" name="faction" id="">
-        <option value=""></option>
-        <option value="companions">The Companions</option>
-        <option value="college_of_winterhold">The College of Winterhold</option>
-        <option value="thieves_guild">The Thieves Guild</option>
-        <option value="dark_brotherhood">The Dark Brotherhood</option>
+      {optionsArr.map((e, i) => {
+        return (
+          <div key={i}>
+            <h4 className="text-xl font-semibold" htmlFor="">
+              {e.label}
+            </h4>
 
-        <option value="dawnguard">The Dawnguard</option>
-        <option value="volkihar_clan">Volkihar Clan</option>
-        <option value="bards_college">The Bards College</option>
-        <option value="blades">The Blades</option>
-      </select>
-      <h4>Civil War Side</h4>
-      <select className="border-2" name="war" id="">
-        <option value=""></option>
-        <option value="">Imperial Legion</option>
-        <option value="">Stormcloaks</option>
-      </select>
-      <h4>Theft Frequency</h4>
-      <select className="border-2" name="war" id="">
-        <option value=""></option>
-        <option value="">No Theft</option>
-        <option value="">Occasional</option>
-        <option value="">Frequent</option>
-        <option value="">Constant</option>
-      </select>
-      <h4>Murder Frequency</h4>
-      <select className="border-2" name="war" id="">
-        <option value=""></option>
-        <option value="">No Murder</option>
-        <option value="">Occasional</option>
-        <option value="">Frequent</option>
-        <option value="">Constant</option>
-      </select>
+            <select
+              className="max-w-2xs w-full px-4 py-1 rounded-lg focus:outline-none border-2 text-lg"
+              onChange={(option) =>  options[e.label] = option.target.value}
+              name={e.label}
+              id=""
+            >
+              <option value={undefined}>random</option>
+              {e.options.map((eValue, i) => {
+                return (
+                  <option key={i} value={eValue}>
+                    {eValue}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        );
+      })}
+      <button onClick={() => console.log(options)}>log</button>
     </div>
   );
 }
