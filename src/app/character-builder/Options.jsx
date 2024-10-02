@@ -33,7 +33,7 @@ export default function Options({options}) {
           </div>
         );
       })}
-      <button onClick={() => console.log(options)}>log</button>
+
     </div>
   );
 }

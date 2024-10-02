@@ -71,7 +71,7 @@ export default function Race({ setPage, update_build }) {
     setPage("build_sheet");
   }
   return (
-    <div className="max-w-5xl border-2 rounded-lg p-5 mx-auto ">
+    <div className="max-w-5xl border-2 rounded-lg p-5 mx-auto bg-white">
       {/* name */}
       <div className="flex flex-col md:text-3xl text-xl">
         <h2>
